@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FitZone Gym & Fitness</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+        body{
+            font-family:'Poppins',sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+
+
+
+
+<!-- =========================
+        HEADER
+========================= -->
+
+<header class="fixed top-0 left-0 w-full bg-black/95 backdrop-blur-md shadow-lg z-50">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+        <div class="flex items-center justify-between h-20">
+
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-3">
+
+                <div class="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center shadow-lg">
+
+                    <i class="fas fa-dumbbell text-white text-xl"></i>
+
+                </div>
+
+                <div>
+
+                    <h1 class="text-3xl font-bold text-white">
+                        Fit<span class="text-orange-500">Zone</span>
+                    </h1>
+
+                    <p class="text-xs text-gray-400">
+                        Stronger Every Day
+                    </p>
+
+                </div>
+
+            </a>
+
+            <!-- Desktop Navigation -->
+            <ul class="hidden lg:flex items-center gap-7 text-white font-medium">
+
+                <li class="relative group">
+
+                    <button class="flex items-center gap-2 hover:text-orange-500 duration-300">
+
+                        Home
+
+                        <i class="fas fa-chevron-down text-xs group-hover:rotate-180 duration-300"></i>
+
+                    </button>
+
+                    <div class="absolute left-0 top-full mt-3 w-52 bg-white rounded-xl shadow-2xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+
+                        <a href="index.html"
+                           class="block px-5 py-3 text-gray-700 hover:bg-orange-500 hover:text-white">
+
+                            Home 1
+
+                        </a>
+
+                        <a href="home2.html"
+                           class="block px-5 py-3 text-gray-700 hover:bg-orange-500 hover:text-white">
+
+                            Home 2
+
+                        </a>
+
+                    </div>
+
+                </li>
+
+                <li><a href="admin.html" class="hover:text-orange-500 duration-300">Admin</a></li>
+
+                <li><a href="about.html" class="hover:text-orange-500 duration-300">About</a></li>
+
+                <li><a href="services.html" class="hover:text-orange-500 duration-300">Services</a></li>
+
+                <li><a href="membership.html" class="hover:text-orange-500 duration-300">Membership</a></li>
+
+                <li><a href="contact.html" class="hover:text-orange-500 duration-300">Contact</a></li>
+
+               
+                <li><a href="dashboard.html" class="hover:text-orange-500 duration-300">Dashboard</a></li>
+
+            </ul>
+
+            <!-- Desktop Buttons -->
+
+            <div class="hidden lg:flex items-center gap-3">
+
+                <!-- RTL -->
+
+                <button id="rtlBtn"
+                    class="w-11 h-11 rounded-lg border border-orange-500 text-white hover:bg-orange-500 duration-300">
+
+                    RTL
+
+                </button>
+
+                <!-- Dark -->
+
+                <button id="darkBtn"
+                    class="w-11 h-11 rounded-lg border border-orange-500 text-white hover:bg-orange-500 duration-300">
+
+                    <i class="fas fa-moon"></i>
+
+                </button>
+
+                <a href="login.html"
+                    class="px-6 py-2 border-2 border-orange-500 rounded-lg text-white hover:bg-orange-500 duration-300">
+
+                    Login
+
+                </a>
+
+                <a href="membership.html"
+                    class="px-6 py-2 bg-orange-500 rounded-lg text-white hover:bg-orange-600 duration-300">
+
+                    Join Now
+
+                </a>
+
+            </div>
+
+            <!-- Mobile Buttons -->
+
+            <div class="flex lg:hidden items-center gap-3">
+
+                <button id="mobileDark"
+                    class="text-white text-xl">
+
+                    <i class="fas fa-moon"></i>
+
+                </button>
+
+                <button id="mobileRTL"
+                    class="text-white font-bold">
+
+                    RTL
+
+                </button>
+
+                <button id="menuBtn"
+                    class="text-white text-2xl">
+
+                    <i class="fas fa-bars"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Mobile Menu -->
+
+    <div id="mobileMenu"
+        class="hidden lg:hidden bg-black border-t border-gray-800">
+
+        <div class="flex flex-col py-5">
+
+            <a href="index.html" class="px-6 py-3 text-white hover:bg-orange-500">Home 1</a>
+
+            <a href="home2.html" class="px-6 py-3 text-white hover:bg-orange-500">Home 2</a>
+
+            <a href="admin.html" class="px-6 py-3 text-white hover:bg-orange-500">Admin</a>
+
+            <a href="about.html" class="px-6 py-3 text-white hover:bg-orange-500">About</a>
+
+            <a href="services.html" class="px-6 py-3 text-white hover:bg-orange-500">Services</a>
+
+            <a href="membership.html" class="px-6 py-3 text-white hover:bg-orange-500">Membership</a>
+
+            <a href="contact.html" class="px-6 py-3 text-white hover:bg-orange-500">Contact</a>
+
+           
+            <a href="dashboard.html" class="px-6 py-3 text-white hover:bg-orange-500">Dashboard</a>
+
+            <div class="px-6 mt-4 flex gap-3">
+
+                <a href="login.html"
+                    class="flex-1 text-center border border-orange-500 py-2 rounded-lg text-white hover:bg-orange-500">
+
+                    Login
+
+                </a>
+
+                <a href="membership.html"
+                    class="flex-1 text-center bg-orange-500 py-2 rounded-lg text-white">
+
+                    Join Now
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<script>
+    // Mobile Menu
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+
+        const icon = menuBtn.querySelector("i");
+
+        if (mobileMenu.classList.contains("hidden")) {
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+        } else {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-xmark");
+        }
+    });
+
+    // Desktop Dark Mode
+    const darkBtn = document.getElementById("darkBtn");
+
+    darkBtn.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+        document.body.classList.toggle("bg-gray-900");
+        document.body.classList.toggle("text-white");
+    });
+
+    // Mobile Dark Mode
+    const mobileDark = document.getElementById("mobileDark");
+
+    mobileDark.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+        document.body.classList.toggle("bg-gray-900");
+        document.body.classList.toggle("text-white");
+    });
+
+    // RTL Toggle
+    function toggleRTL() {
+        const html = document.documentElement;
+
+        if (html.dir === "rtl") {
+            html.dir = "ltr";
+            html.lang = "en";
+        } else {
+            html.dir = "rtl";
+            html.lang = "ar";
+        }
+    }
+
+    document.getElementById("rtlBtn").addEventListener("click", toggleRTL);
+    document.getElementById("mobileRTL").addEventListener("click", toggleRTL);
+</script>
+
+
+
+
+
+
+<!-- =========================
+        CONTACT HERO
+========================= -->
+
+<<<section class="relative pt-24 h-[75vh] bg-cover bg-center flex items-center justify-center"
+style="background-image: url('image/contact-banner.jpg');">
+
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-orange-900/60"></div>
+
+    <!-- Decorative Circles -->
+    <div class="absolute top-20 left-20 w-32 h-32 bg-orange-500/20 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 right-20 w-40 h-40 bg-orange-400/20 rounded-full blur-3xl"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 text-center px-6">
+
+        <span class="inline-block px-5 py-2 bg-orange-500/20 border border-orange-400 text-orange-300 rounded-full text-sm uppercase tracking-widest mb-6 backdrop-blur-md">
+            Get In Touch
+        </span>
+
+        <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight">
+            Let's Start Your
+            <span class="text-orange-500">Fitness Journey</span>
+        </h1>
+
+        <p class="text-gray-300 text-lg max-w-3xl mx-auto mt-6 leading-8">
+            Have questions about memberships, personal training, or classes?
+            Our FitZone team is always ready to help you become stronger,
+            healthier, and more confident.
+        </p>
+
+        <!-- Buttons -->
+
+        <div class="flex flex-col sm:flex-row justify-center gap-5 mt-10">
+
+            <a href="#contact-form"
+            class="bg-orange-500 px-8 py-4 rounded-xl font-semibold text-white hover:bg-orange-600 hover:scale-105 transition duration-300 shadow-xl">
+
+                Book Free Consultation
+
+            </a>
+
+            <a href="membership.html"
+            class="border-2 border-white px-8 py-4 rounded-xl text-white font-semibold hover:bg-white hover:text-black transition duration-300">
+
+                View Membership
+
+            </a>
+
+        </div>
+
+        <!-- Breadcrumb -->
+
+        <div class="inline-flex items-center mt-12 bg-white/10 backdrop-blur-md px-6 py-3 rounded-full text-white">
+
+            <a href="index.html"
+            class="hover:text-orange-400 transition">
+
+                Home
+
+            </a>
+
+            <span class="mx-3 text-orange-500">
+                >
+            </span>
+
+            <span class="text-orange-400 font-semibold">
+
+                Contact
+
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+      VISIT OUR FITNESS HUB
+========================= -->
+
+<section class="py-24 bg-white">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-20">
+
+        <!-- Heading -->
+
+        <div class="text-center mb-16">
+
+            <span class="text-orange-500 uppercase font-semibold tracking-[3px]">
+                Contact Us
+            </span>
+
+            <h2 class="text-5xl font-bold text-gray-900 mt-4">
+                Visit Our Fitness Hub
+            </h2>
+
+            <p class="text-gray-600 max-w-3xl mx-auto mt-5 leading-8">
+                We'd love to meet you! Stop by for a free gym tour, speak with our trainers,
+                and discover the perfect membership plan for your fitness goals.
+            </p>
+
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-8">
+
+            <!-- Large Card -->
+
+            <div class="lg:col-span-2 bg-gradient-to-r from-orange-500 to-orange-600 rounded-3xl p-10 text-white shadow-2xl hover:scale-[1.02] transition duration-500">
+
+                <div class="flex items-center gap-5 mb-8">
+
+                    <div class="w-20 h-20 rounded-full bg-white text-orange-500 flex items-center justify-center text-4xl">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="text-3xl font-bold">
+                            FitZone Main Branch
+                        </h3>
+
+                        <p class="text-orange-100">
+                            Bangalore, Karnataka
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <p class="leading-8 text-orange-50 mb-8">
+                    Experience world-class fitness facilities, premium equipment,
+                    certified trainers, dedicated cardio zones, strength training,
+                    yoga studios, and recovery areas—all under one roof.
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-6">
+
+                    <div>
+
+                        <h4 class="font-bold text-xl mb-2">
+                            Address
+                        </h4>
+
+                        <p>
+                            25 Fitness Street,<br>
+                            MG Road,<br>
+                            Bangalore - 560001
+                        </p>
+
+                    </div>
+
+                    <div>
+
+                        <h4 class="font-bold text-xl mb-2">
+                            Working Hours
+                        </h4>
+
+                        <p>
+                            Monday - Sunday<br>
+                            5:00 AM – 11:00 PM
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Right Side -->
+
+            <div class="space-y-6">
+
+                <!-- Phone -->
+
+                <div class="bg-orange-50 rounded-2xl p-6 shadow-md hover:shadow-xl hover:-translate-y-2 transition">
+
+                    <div class="flex items-center gap-5">
+
+                        <div class="w-16 h-16 rounded-full bg-orange-500 text-white flex items-center justify-center text-2xl">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3 class="font-bold text-xl">
+                                Call Us
+                            </h3>
+
+                            <p class="text-gray-600">
+                                +91 98765 43210
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Email -->
+
+                <div class="bg-orange-50 rounded-2xl p-6 shadow-md hover:shadow-xl hover:-translate-y-2 transition">
+
+                    <div class="flex items-center gap-5">
+
+                        <div class="w-16 h-16 rounded-full bg-orange-500 text-white flex items-center justify-center text-2xl">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3 class="font-bold text-xl">
+                                Email Us
+                            </h3>
+
+                            <p class="text-gray-600">
+                                support@fitzone.com
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Consultation -->
+
+                <div class="bg-gray-900 rounded-2xl p-6 text-center text-white hover:bg-orange-500 transition duration-300">
+
+                    <h3 class="text-2xl font-bold mb-3">
+                        Free Fitness Consultation
+                    </h3>
+
+                    <p class="text-gray-300 mb-6">
+                        Meet our trainers and get a personalized workout plan.
+                    </p>
+
+                    <a href="#contact-form"
+                    class="inline-block bg-white text-orange-500 px-6 py-3 rounded-xl font-semibold hover:scale-105 transition">
+
+                        Book Appointment
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+        FIND US
+========================= -->
+
+<section id="map" class="py-24 bg-white">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-20">
+
+        <!-- Heading -->
+
+        <div class="text-center mb-16">
+
+            <span class="text-orange-500 uppercase font-semibold tracking-[3px]">
+                Visit Our Gym
+            </span>
+
+            <h2 class="text-5xl font-bold text-gray-900 mt-4">
+                Find FitZone Near You
+            </h2>
+
+            <p class="text-gray-600 max-w-3xl mx-auto mt-5 leading-8">
+                Conveniently located in the heart of the city with easy access,
+                free parking, and nearby public transportation.
+            </p>
+
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+
+            <!-- Google Map -->
+
+            <div class="rounded-3xl overflow-hidden shadow-2xl hover:shadow-orange-200 transition duration-500">
+
+                <iframe
+                    src="https://www.google.com/maps?q=Bangalore&output=embed"
+                    class="w-full h-[500px]"
+                    loading="lazy">
+                </iframe>
+
+            </div>
+
+            <!-- Visit Details -->
+
+            <div class="space-y-6">
+
+                <!-- Address -->
+
+                <div class="flex items-start gap-5 bg-orange-50 p-6 rounded-2xl hover:bg-orange-100 transition">
+
+                    <div class="w-14 h-14 rounded-full bg-orange-500 flex items-center justify-center text-white text-xl">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="text-2xl font-bold">
+                            Address
+                        </h3>
+
+                        <p class="text-gray-600 mt-2">
+                            25 Fitness Street,
+                            MG Road,
+                            Bangalore - 560001
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Parking -->
+
+                <div class="flex items-start gap-5 bg-orange-50 p-6 rounded-2xl hover:bg-orange-100 transition">
+
+                    <div class="w-14 h-14 rounded-full bg-orange-500 flex items-center justify-center text-white text-xl">
+
+                        <i class="fa-solid fa-square-parking"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="text-2xl font-bold">
+                            Free Parking
+                        </h3>
+
+                        <p class="text-gray-600 mt-2">
+                            Secure parking available for both cars and bikes.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Public Transport -->
+
+                <div class="flex items-start gap-5 bg-orange-50 p-6 rounded-2xl hover:bg-orange-100 transition">
+
+                    <div class="w-14 h-14 rounded-full bg-orange-500 flex items-center justify-center text-white text-xl">
+
+                        <i class="fa-solid fa-bus"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="text-2xl font-bold">
+                            Easy to Reach
+                        </h3>
+
+                        <p class="text-gray-600 mt-2">
+                            Just a 5-minute walk from the nearest Metro Station
+                            and Bus Stop.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Button -->
+
+                <a href="https://maps.google.com"
+                target="_blank"
+                class="inline-flex items-center gap-3 bg-orange-500 text-white px-8 py-4 rounded-xl hover:bg-orange-600 hover:scale-105 transition">
+
+                    <i class="fa-solid fa-location-arrow"></i>
+
+                    Get Directions
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+        FAQ SECTION
+========================= -->
+
+<section class="py-24 bg-gray-100">
+
+    <div class="max-w-5xl mx-auto px-6">
+
+        <!-- Heading -->
+
+        <div class="text-center mb-16">
+
+            <span class="text-orange-500 uppercase tracking-[3px] font-semibold">
+                Frequently Asked Questions
+            </span>
+
+            <h2 class="text-5xl font-bold text-gray-900 mt-4">
+                Have Questions?
+            </h2>
+
+            <p class="text-gray-600 mt-5 max-w-2xl mx-auto leading-8">
+                Find quick answers to the questions we receive most often from
+                our members.
+            </p>
+
+        </div>
+
+        <!-- FAQ 1 -->
+
+        <div class="bg-white rounded-2xl shadow-lg mb-5 overflow-hidden">
+
+            <button
+                class="faq-btn w-full flex justify-between items-center px-8 py-6 text-left font-semibold text-xl hover:bg-orange-50">
+
+                Do I need prior gym experience?
+
+                <span class="text-2xl">+</span>
+
+            </button>
+
+            <div class="faq-content hidden px-8 pb-6 text-gray-600 leading-8">
+
+                No. Our certified trainers will guide beginners with personalized
+                workout plans and proper equipment usage.
+
+            </div>
+
+        </div>
+
+        <!-- FAQ 2 -->
+
+        <div class="bg-white rounded-2xl shadow-lg mb-5 overflow-hidden">
+
+            <button
+                class="faq-btn w-full flex justify-between items-center px-8 py-6 text-left font-semibold text-xl hover:bg-orange-50">
+
+                Can I try the gym before joining?
+
+                <span class="text-2xl">+</span>
+
+            </button>
+
+            <div class="faq-content hidden px-8 pb-6 text-gray-600 leading-8">
+
+                Yes! We offer a complimentary gym tour and a free trial session
+                for first-time visitors.
+
+            </div>
+
+        </div>
+
+        <!-- FAQ 3 -->
+
+        <div class="bg-white rounded-2xl shadow-lg mb-5 overflow-hidden">
+
+            <button
+                class="faq-btn w-full flex justify-between items-center px-8 py-6 text-left font-semibold text-xl hover:bg-orange-50">
+
+                What are your operating hours?
+
+                <span class="text-2xl">+</span>
+
+            </button>
+
+            <div class="faq-content hidden px-8 pb-6 text-gray-600 leading-8">
+
+                We are open every day from <strong>5:00 AM to 11:00 PM</strong>,
+                including weekends.
+
+            </div>
+
+        </div>
+
+        <!-- FAQ 4 -->
+
+        <div class="bg-white rounded-2xl shadow-lg mb-5 overflow-hidden">
+
+            <button
+                class="faq-btn w-full flex justify-between items-center px-8 py-6 text-left font-semibold text-xl hover:bg-orange-50">
+
+                Are personal trainers included in every plan?
+
+                <span class="text-2xl">+</span>
+
+            </button>
+
+            <div class="faq-content hidden px-8 pb-6 text-gray-600 leading-8">
+
+                Personal training is included in Premium and Elite memberships.
+                It can also be added to Basic and Standard plans.
+
+            </div>
+
+        </div>
+
+        <!-- FAQ 5 -->
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+
+            <button
+                class="faq-btn w-full flex justify-between items-center px-8 py-6 text-left font-semibold text-xl hover:bg-orange-50">
+
+                Do you provide nutrition guidance?
+
+                <span class="text-2xl">+</span>
+
+            </button>
+
+            <div class="faq-content hidden px-8 pb-6 text-gray-600 leading-8">
+
+                Yes. Our nutrition experts create personalized meal plans to
+                complement your fitness goals.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+<!-- =========================
+        MODERN FOOTER
+========================= -->
+
+<footer class="bg-gradient-to-r from-gray-900 via-black to-gray-900 text-gray-300">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-20 py-16">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+            <!-- Logo & About -->
+
+            <div>
+
+                <h2 class="text-4xl font-bold text-orange-500 mb-4 hover:text-orange-400 transition duration-300">
+                    FitZone
+                </h2>
+
+                <p class="leading-7 text-gray-400">
+                    Train harder, live healthier, and become the strongest version of yourself with our premium gym facilities and expert trainers.
+                </p>
+
+                <div class="flex space-x-4 mt-6">
+
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-blue-600 hover:scale-110 transition duration-300">
+                        <i class="fab fa-facebook-f text-white"></i>
+                    </a>
+
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-pink-500 hover:scale-110 transition duration-300">
+                        <i class="fab fa-instagram text-white"></i>
+                    </a>
+
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-sky-500 hover:scale-110 transition duration-300">
+                        <i class="fab fa-twitter text-white"></i>
+                    </a>
+
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-red-600 hover:scale-110 transition duration-300">
+                        <i class="fab fa-youtube text-white"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Quick Links -->
+
+            <div>
+
+                <h3 class="text-2xl font-semibold text-white mb-6">
+                    Quick Links
+                </h3>
+
+                <ul class="space-y-4">
+
+                    <li>
+                        <a href="index.html" class="flex items-center gap-3 hover:text-orange-500 hover:translate-x-2 transition duration-300">
+                            <i class="fas fa-house text-orange-500"></i>
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html" class="flex items-center gap-3 hover:text-orange-500 hover:translate-x-2 transition duration-300">
+                            <i class="fas fa-circle-info text-orange-500"></i>
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="services.html" class="flex items-center gap-3 hover:text-orange-500 hover:translate-x-2 transition duration-300">
+                            <i class="fas fa-dumbbell text-orange-500"></i>
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="membership.html" class="flex items-center gap-3 hover:text-orange-500 hover:translate-x-2 transition duration-300">
+                            <i class="fas fa-id-card text-orange-500"></i>
+                            Membership
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html" class="flex items-center gap-3 hover:text-orange-500 hover:translate-x-2 transition duration-300">
+                            <i class="fas fa-phone-volume text-orange-500"></i>
+                            Contact
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="dashboard.html" class="flex items-center gap-3 hover:text-orange-500 hover:translate-x-2 transition duration-300">
+                            <i class="fas fa-gauge-high text-orange-500"></i>
+                            Dashboard
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Contact -->
+
+            <div>
+
+                <h3 class="text-2xl font-semibold text-white mb-6">
+                    Contact Us
+                </h3>
+
+                <div class="space-y-4">
+
+                    <p class="flex items-center hover:text-orange-500 transition duration-300">
+                        <i class="fas fa-location-dot text-orange-500 mr-3"></i>
+                        Chennai, Tamil Nadu
+                    </p>
+
+                    <p class="flex items-center hover:text-orange-500 transition duration-300">
+                        <i class="fas fa-phone text-orange-500 mr-3"></i>
+                        +91 98765 43210
+                    </p>
+
+                    <p class="flex items-center hover:text-orange-500 transition duration-300">
+                        <i class="fas fa-envelope text-orange-500 mr-3"></i>
+                        info@fitzone.com
+                    </p>
+
+                    <p class="flex items-center hover:text-orange-500 transition duration-300">
+                        <i class="fas fa-clock text-orange-500 mr-3"></i>
+                        Mon - Sun : 6:00 AM - 10:00 PM
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Newsletter -->
+
+            <div>
+
+                <h3 class="text-2xl font-semibold text-white mb-6">
+                    Newsletter
+                </h3>
+
+                <p class="mb-5 text-gray-400">
+                    Subscribe to receive fitness tips, exclusive offers, and the latest gym updates.
+                </p>
+
+                <div class="flex">
+
+                    <input
+                        type="email"
+                        placeholder="Enter Your Email"
+                        class="w-full px-4 py-3 rounded-l-lg text-black outline-none">
+
+                    <button class="bg-orange-500 px-5 rounded-r-lg hover:bg-orange-600 transition duration-300">
+
+                        <i class="fas fa-paper-plane text-white"></i>
+
+                    </button>
+
+                </div>
+
+                <button class="mt-6 w-full bg-orange-500 py-3 rounded-lg font-semibold hover:bg-orange-600 hover:scale-105 transition duration-300 flex items-center justify-center gap-2">
+
+                    <i class="fas fa-user-plus"></i>
+
+                    Join Now
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Bottom Footer -->
+
+        <div class="border-t border-gray-700 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center text-sm">
+
+            <p class="text-center md:text-left">
+                © 2026 <span class="text-orange-500 font-semibold">FitZone Gym & Fitness</span>. All Rights Reserved.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-6 mt-4 md:mt-0">
+
+                <a href="#" class="hover:text-orange-500 transition duration-300">
+                    Privacy Policy
+                </a>
+
+                <a href="#" class="hover:text-orange-500 transition duration-300">
+                    Terms & Conditions
+                </a>
+
+                <a href="#" class="hover:text-orange-500 transition duration-300">
+                    Support
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
