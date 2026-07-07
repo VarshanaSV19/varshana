@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FitZone Gym & Fitness</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+        body{
+            font-family:'Poppins',sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+
+
+
+
+<!-- =========================
+        HEADER
+========================= -->
+
+<header class="fixed top-0 left-0 w-full bg-black/95 backdrop-blur-md shadow-lg z-50">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+        <div class="flex items-center justify-between h-20">
+
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-3">
+
+                <div class="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center shadow-lg">
+
+                    <i class="fas fa-dumbbell text-white text-xl"></i>
+
+                </div>
+
+                <div>
+
+                    <h1 class="text-3xl font-bold text-white">
+                        Fit<span class="text-orange-500">Zone</span>
+                    </h1>
+
+                    <p class="text-xs text-gray-400">
+                        Stronger Every Day
+                    </p>
+
+                </div>
+
+            </a>
+
+            <!-- Desktop Navigation -->
+            <ul class="hidden lg:flex items-center gap-7 text-white font-medium">
+
+                <li class="relative group">
+
+                    <button class="flex items-center gap-2 hover:text-orange-500 duration-300">
+
+                        Home
+
+                        <i class="fas fa-chevron-down text-xs group-hover:rotate-180 duration-300"></i>
+
+                    </button>
+
+                    <div class="absolute left-0 top-full mt-3 w-52 bg-white rounded-xl shadow-2xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+
+                        <a href="index.html"
+                           class="block px-5 py-3 text-gray-700 hover:bg-orange-500 hover:text-white">
+
+                            Home 1
+
+                        </a>
+
+                        <a href="home2.html"
+                           class="block px-5 py-3 text-gray-700 hover:bg-orange-500 hover:text-white">
+
+                            Home 2
+
+                        </a>
+
+                    </div>
+
+                </li>
+
+                <li><a href="admin.html" class="hover:text-orange-500 duration-300">Admin</a></li>
+
+                <li><a href="about.html" class="hover:text-orange-500 duration-300">About</a></li>
+
+                <li><a href="services.html" class="hover:text-orange-500 duration-300">Services</a></li>
+
+                <li><a href="membership.html" class="hover:text-orange-500 duration-300">Membership</a></li>
+
+                <li><a href="contact.html" class="hover:text-orange-500 duration-300">Contact</a></li>
+
+               
+
+                <li><a href="dashboard.html" class="hover:text-orange-500 duration-300">Dashboard</a></li>
+
+            </ul>
+
+            <!-- Desktop Buttons -->
+
+            <div class="hidden lg:flex items-center gap-3">
+
+                <!-- RTL -->
+
+                <button id="rtlBtn"
+                    class="w-11 h-11 rounded-lg border border-orange-500 text-white hover:bg-orange-500 duration-300">
+
+                    RTL
+
+                </button>
+
+                <!-- Dark -->
+
+                <button id="darkBtn"
+                    class="w-11 h-11 rounded-lg border border-orange-500 text-white hover:bg-orange-500 duration-300">
+
+                    <i class="fas fa-moon"></i>
+
+                </button>
+
+                <a href="login.html"
+                    class="px-6 py-2 border-2 border-orange-500 rounded-lg text-white hover:bg-orange-500 duration-300">
+
+                    Login
+
+                </a>
+
+                <a href="membership.html"
+                    class="px-6 py-2 bg-orange-500 rounded-lg text-white hover:bg-orange-600 duration-300">
+
+                    Join Now
+
+                </a>
+
+            </div>
+
+            <!-- Mobile Buttons -->
+
+            <div class="flex lg:hidden items-center gap-3">
+
+                <button id="mobileDark"
+                    class="text-white text-xl">
+
+                    <i class="fas fa-moon"></i>
+
+                </button>
+
+                <button id="mobileRTL"
+                    class="text-white font-bold">
+
+                    RTL
+
+                </button>
+
+                <button id="menuBtn"
+                    class="text-white text-2xl">
+
+                    <i class="fas fa-bars"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Mobile Menu -->
+
+    <div id="mobileMenu"
+        class="hidden lg:hidden bg-black border-t border-gray-800">
+
+        <div class="flex flex-col py-5">
+
+            <a href="index.html" class="px-6 py-3 text-white hover:bg-orange-500">Home 1</a>
+
+            <a href="home2.html" class="px-6 py-3 text-white hover:bg-orange-500">Home 2</a>
+
+            <a href="admin.html" class="px-6 py-3 text-white hover:bg-orange-500">Admin</a>
+
+            <a href="about.html" class="px-6 py-3 text-white hover:bg-orange-500">About</a>
+
+            <a href="services.html" class="px-6 py-3 text-white hover:bg-orange-500">Services</a>
+
+            <a href="membership.html" class="px-6 py-3 text-white hover:bg-orange-500">Membership</a>
+
+            <a href="contact.html" class="px-6 py-3 text-white hover:bg-orange-500">Contact</a>
+
+           
+            <a href="dashboard.html" class="px-6 py-3 text-white hover:bg-orange-500">Dashboard</a>
+
+            <div class="px-6 mt-4 flex gap-3">
+
+                <a href="login.html"
+                    class="flex-1 text-center border border-orange-500 py-2 rounded-lg text-white hover:bg-orange-500">
+
+                    Login
+
+                </a>
+
+                <a href="membership.html"
+                    class="flex-1 text-center bg-orange-500 py-2 rounded-lg text-white">
+
+                    Join Now
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<script>
+    // Mobile Menu
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+
+        const icon = menuBtn.querySelector("i");
+
+        if (mobileMenu.classList.contains("hidden")) {
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+        } else {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-xmark");
+        }
+    });
+
+    // Desktop Dark Mode
+    const darkBtn = document.getElementById("darkBtn");
+
+    darkBtn.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+        document.body.classList.toggle("bg-gray-900");
+        document.body.classList.toggle("text-white");
+    });
+
+    // Mobile Dark Mode
+    const mobileDark = document.getElementById("mobileDark");
+
+    mobileDark.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+        document.body.classList.toggle("bg-gray-900");
+        document.body.classList.toggle("text-white");
+    });
+
+    // RTL Toggle
+    function toggleRTL() {
+        const html = document.documentElement;
+
+        if (html.dir === "rtl") {
+            html.dir = "ltr";
+            html.lang = "en";
+        } else {
+            html.dir = "rtl";
+            html.lang = "ar";
+        }
+    }
+
+    document.getElementById("rtlBtn").addEventListener("click", toggleRTL);
+    document.getElementById("mobileRTL").addEventListener("click", toggleRTL);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Registration Management -->
+
+<section class="px-8 pb-8">
+
+    <div class="bg-white rounded-2xl shadow-lg">
+
+        <!-- Header -->
+
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 p-6 border-b">
+
+            <div>
+
+                <h2 class="text-2xl font-bold text-gray-800">
+                    Registration Management
+                </h2>
+
+                <p class="text-gray-500 text-sm mt-1">
+                    Manage newly registered gym members.
+                </p>
+
+            </div>
+
+            <div class="flex gap-3">
+
+                <input
+                    type="text"
+                    placeholder="Search Member..."
+                    class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+
+                <button class="bg-orange-500 hover:bg-orange-600 text-white px-5 rounded-lg transition">
+
+                    <i class="fas fa-user-plus mr-2"></i>
+
+                    Add Member
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Table -->
+
+        <div class="overflow-x-auto">
+
+            <table class="w-full">
+
+                <thead class="bg-gray-100">
+
+                    <tr>
+
+                        <th class="px-6 py-4 text-left">Member</th>
+
+                        <th class="px-6 py-4 text-left">Membership</th>
+
+                        <th class="px-6 py-4 text-left">Joining Date</th>
+
+                        <th class="px-6 py-4 text-left">Status</th>
+
+                        <th class="px-6 py-4 text-center">Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr class="border-b hover:bg-orange-50 transition">
+
+                        <td class="px-6 py-5">
+
+                            <div class="flex items-center gap-4">
+
+                                <img src="https://i.pravatar.cc/50?img=15"
+                                     class="w-12 h-12 rounded-full">
+
+                                <div>
+
+                                    <h3 class="font-semibold">
+                                        Rahul Sharma
+                                    </h3>
+
+                                    <p class="text-sm text-gray-500">
+                                        rahul@gmail.com
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td class="px-6 py-5">
+
+                            <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm">
+                                Premium
+                            </span>
+
+                        </td>
+
+                        <td class="px-6 py-5">
+                            03 July 2026
+                        </td>
+
+                        <td class="px-6 py-5">
+
+                            <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">
+                                Active
+                            </span>
+
+                        </td>
+
+                        <td class="px-6 py-5">
+
+                            <div class="flex justify-center gap-2">
+
+                                <button class="w-10 h-10 rounded-lg bg-blue-100 hover:bg-blue-500 hover:text-white transition">
+
+                                    <i class="fas fa-eye"></i>
+
+                                </button>
+
+                                <button class="w-10 h-10 rounded-lg bg-yellow-100 hover:bg-yellow-500 hover:text-white transition">
+
+                                    <i class="fas fa-edit"></i>
+
+                                </button>
+
+                                <button class="w-10 h-10 rounded-lg bg-red-100 hover:bg-red-500 hover:text-white transition">
+
+                                    <i class="fas fa-trash"></i>
+
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b hover:bg-orange-50 transition">
+
+                        <td class="px-6 py-5">
+
+                            <div class="flex items-center gap-4">
+
+                                <img src="https://i.pravatar.cc/50?img=32"
+                                     class="w-12 h-12 rounded-full">
+
+                                <div>
+
+                                    <h3 class="font-semibold">
+                                        Priya Nair
+                                    </h3>
+
+                                    <p class="text-sm text-gray-500">
+                                        priya@gmail.com
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td class="px-6 py-5">
+
+                            <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">
+                                Gold
+                            </span>
+
+                        </td>
+
+                        <td class="px-6 py-5">
+                            01 July 2026
+                        </td>
+
+                        <td class="px-6 py-5">
+
+                            <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">
+                                Active
+                            </span>
+
+                        </td>
+
+                        <td class="px-6 py-5">
+
+                            <div class="flex justify-center gap-2">
+
+                                <button class="w-10 h-10 rounded-lg bg-blue-100 hover:bg-blue-500 hover:text-white transition">
+
+                                    <i class="fas fa-eye"></i>
+
+                                </button>
+
+                                <button class="w-10 h-10 rounded-lg bg-yellow-100 hover:bg-yellow-500 hover:text-white transition">
+
+                                    <i class="fas fa-edit"></i>
+
+                                </button>
+
+                                <button class="w-10 h-10 rounded-lg bg-red-100 hover:bg-red-500 hover:text-white transition">
+
+                                    <i class="fas fa-trash"></i>
+
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+<!-- =========================
+      Member Statistics
+========================= -->
+
+<section class="px-8 pb-8">
+
+    <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-6">
+
+        <!-- Active Members -->
+
+        <div class="bg-gradient-to-r from-green-500 to-green-600 rounded-2xl p-6 text-white shadow-lg hover:scale-105 transition duration-300">
+
+            <div class="flex justify-between items-center">
+
+                <div>
+
+                    <p class="text-green-100">Active Members</p>
+
+                    <h2 class="text-4xl font-bold mt-2">986</h2>
+
+                    <span class="text-sm">+25 This Month</span>
+
+                </div>
+
+                <div class="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center">
+
+                    <i class="fas fa-user-check text-3xl"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Pending Approval -->
+
+        <div class="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl p-6 text-white shadow-lg hover:scale-105 transition duration-300">
+
+            <div class="flex justify-between items-center">
+
+                <div>
+
+                    <p class="text-yellow-100">Pending Approval</p>
+
+                    <h2 class="text-4xl font-bold mt-2">18</h2>
+
+                    <span class="text-sm">Need Review</span>
+
+                </div>
+
+                <div class="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center">
+
+                    <i class="fas fa-clock text-3xl"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Expired -->
+
+        <div class="bg-gradient-to-r from-red-500 to-red-600 rounded-2xl p-6 text-white shadow-lg hover:scale-105 transition duration-300">
+
+            <div class="flex justify-between items-center">
+
+                <div>
+
+                    <p class="text-red-100">Expired Plans</p>
+
+                    <h2 class="text-4xl font-bold mt-2">42</h2>
+
+                    <span class="text-sm">Renew Required</span>
+
+                </div>
+
+                <div class="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center">
+
+                    <i class="fas fa-exclamation-circle text-3xl"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- New Today -->
+
+        <div class="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl p-6 text-white shadow-lg hover:scale-105 transition duration-300">
+
+            <div class="flex justify-between items-center">
+
+                <div>
+
+                    <p class="text-blue-100">New Today</p>
+
+                    <h2 class="text-4xl font-bold mt-2">12</h2>
+
+                    <span class="text-sm">Fresh Registrations</span>
+
+                </div>
+
+                <div class="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center">
+
+                    <i class="fas fa-user-plus text-3xl"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+      Recent Member Activity
+========================= -->
+
+<section class="px-8 pb-10">
+
+    <div class="bg-white rounded-2xl shadow-lg p-6">
+
+        <div class="flex justify-between items-center mb-6">
+
+            <h2 class="text-2xl font-bold text-gray-800">
+                Recent Member Activity
+            </h2>
+
+            <button class="text-orange-500 font-semibold hover:underline">
+                View All
+            </button>
+
+        </div>
+
+        <div class="space-y-5">
+
+            <div class="flex items-center justify-between border-b pb-4">
+
+                <div class="flex items-center gap-4">
+
+                    <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
+
+                        <i class="fas fa-user-check text-green-600"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="font-semibold">
+                            Rahul Sharma checked in
+                        </h3>
+
+                        <p class="text-sm text-gray-500">
+                            Today • 08:15 AM
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <span class="text-green-600 font-medium">
+                    Completed
+                </span>
+
+            </div>
+
+            <div class="flex items-center justify-between border-b pb-4">
+
+                <div class="flex items-center gap-4">
+
+                    <div class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center">
+
+                        <i class="fas fa-credit-card text-orange-500"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="font-semibold">
+                            Priya Nair renewed Gold Membership
+                        </h3>
+
+                        <p class="text-sm text-gray-500">
+                            Yesterday • 06:40 PM
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <span class="text-orange-500 font-medium">
+                    Renewed
+                </span>
+
+            </div>
+
+            <div class="flex items-center justify-between">
+
+                <div class="flex items-center gap-4">
+
+                    <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+
+                        <i class="fas fa-user-plus text-blue-600"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="font-semibold">
+                            Arjun Kumar registered
+                        </h3>
+
+                        <p class="text-sm text-gray-500">
+                            2 Days Ago
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <span class="text-blue-600 font-medium">
+                    New
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+<!-- =========================
+      Live Gym Access Monitor
+========================= -->
+
+<section class="px-8 pb-10">
+
+    <div class="bg-white rounded-2xl shadow-lg p-6">
+
+        <div class="flex justify-between items-center mb-6">
+
+            <div>
+
+                <h2 class="text-2xl font-bold text-gray-800">
+                    Live Gym Access Monitor
+                </h2>
+
+                <p class="text-gray-500">
+                    Real-time member check-in status
+                </p>
+
+            </div>
+
+            <div class="flex items-center gap-2">
+
+                <span class="w-3 h-3 rounded-full bg-green-500 animate-pulse"></span>
+
+                <span class="text-green-600 font-semibold">
+                    Live
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <!-- Currently Inside -->
+
+            <div class="border rounded-xl p-5 hover:shadow-lg transition">
+
+                <div class="flex items-center justify-between">
+
+                    <div>
+
+                        <h3 class="font-semibold text-lg">
+                            Rahul Sharma
+                        </h3>
+
+                        <p class="text-gray-500">
+                            Checked In
+                        </p>
+
+                    </div>
+
+                    <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">
+                        Inside
+                    </span>
+
+                </div>
+
+                <div class="mt-4">
+
+                    <p class="text-sm text-gray-500">
+                        Check-In Time
+                    </p>
+
+                    <h4 class="font-bold text-lg">
+                        07:45 AM
+                    </h4>
+
+                </div>
+
+            </div>
+
+            <!-- Completed Workout -->
+
+            <div class="border rounded-xl p-5 hover:shadow-lg transition">
+
+                <div class="flex items-center justify-between">
+
+                    <div>
+
+                        <h3 class="font-semibold text-lg">
+                            Priya Nair
+                        </h3>
+
+                        <p class="text-gray-500">
+                            Workout Finished
+                        </p>
+
+                    </div>
+
+                    <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">
+                        Checked Out
+                    </span>
+
+                </div>
+
+                <div class="mt-4">
+
+                    <p class="text-sm text-gray-500">
+                        Duration
+                    </p>
+
+                    <h4 class="font-bold text-lg">
+                        1h 35m
+                    </h4>
+
+                </div>
+
+            </div>
+
+            <!-- Overdue -->
+
+            <div class="border rounded-xl p-5 hover:shadow-lg transition">
+
+                <div class="flex items-center justify-between">
+
+                    <div>
+
+                        <h3 class="font-semibold text-lg">
+                            Arjun Kumar
+                        </h3>
+
+                        <p class="text-gray-500">
+                            No Checkout
+                        </p>
+
+                    </div>
+
+                    <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">
+                        Alert
+                    </span>
+
+                </div>
+
+                <div class="mt-4">
+
+                    <p class="text-sm text-gray-500">
+                        Inside Since
+                    </p>
+
+                    <h4 class="font-bold text-lg">
+                        05:30 AM
+                    </h4>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- =========================
+      Equipment Maintenance
+========================= -->
+
+<section class="px-8 pb-10">
+
+    <div class="bg-white rounded-2xl shadow-lg">
+
+        <!-- Header -->
+
+        <div class="flex justify-between items-center p-6 border-b">
+
+            <div>
+
+                <h2 class="text-2xl font-bold text-gray-800">
+                    Equipment Maintenance
+                </h2>
+
+                <p class="text-gray-500 mt-1">
+                    Monitor equipment health and maintenance schedule.
+                </p>
+
+            </div>
+
+            <button class="bg-orange-500 hover:bg-orange-600 text-white px-5 py-3 rounded-lg transition">
+
+                <i class="fas fa-plus mr-2"></i>
+
+                Add Equipment
+
+            </button>
+
+        </div>
+
+        <div class="overflow-x-auto">
+
+            <table class="w-full">
+
+                <thead class="bg-gray-100">
+
+                    <tr>
+
+                        <th class="px-6 py-4 text-left">Equipment</th>
+
+                        <th class="px-6 py-4 text-left">Quantity</th>
+
+                        <th class="px-6 py-4 text-left">Last Service</th>
+
+                        <th class="px-6 py-4 text-left">Next Service</th>
+
+                        <th class="px-6 py-4 text-left">Status</th>
+
+                        <th class="px-6 py-4 text-center">Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr class="border-b hover:bg-orange-50">
+
+                        <td class="px-6 py-5 font-semibold">
+                            Treadmill
+                        </td>
+
+                        <td class="px-6 py-5">
+                            8
+                        </td>
+
+                        <td class="px-6 py-5">
+                            20 Jun 2026
+                        </td>
+
+                        <td class="px-6 py-5">
+                            20 Jul 2026
+                        </td>
+
+                        <td class="px-6 py-5">
+
+                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">
+
+                                Excellent
+
+                            </span>
+
+                        </td>
+
+                        <td class="px-6 py-5 text-center">
+
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg">
+
+                                View
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b hover:bg-orange-50">
+
+                        <td class="px-6 py-5 font-semibold">
+                            Bench Press
+                        </td>
+
+                        <td class="px-6 py-5">
+                            6
+                        </td>
+
+                        <td class="px-6 py-5">
+                            15 Jun 2026
+                        </td>
+
+                        <td class="px-6 py-5">
+                            15 Jul 2026
+                        </td>
+
+                        <td class="px-6 py-5">
+
+                            <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm">
+
+                                Maintenance Due
+
+                            </span>
+
+                        </td>
+
+                        <td class="px-6 py-5 text-center">
+
+                            <button class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg">
+
+                                Schedule
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr class="hover:bg-orange-50">
+
+                        <td class="px-6 py-5 font-semibold">
+                            Exercise Bike
+                        </td>
+
+                        <td class="px-6 py-5">
+                            10
+                        </td>
+
+                        <td class="px-6 py-5">
+                            10 May 2026
+                        </td>
+
+                        <td class="px-6 py-5">
+                            10 Jun 2026
+                        </td>
+
+                        <td class="px-6 py-5">
+
+                            <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm">
+
+                                Service Required
+
+                            </span>
+
+                        </td>
+
+                        <td class="px-6 py-5 text-center">
+
+                            <button class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg">
+
+                                Repair
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+<!-- =========================
+        MODERN FOOTER
+========================= -->
+
+<footer class="bg-gradient-to-r from-gray-900 via-black to-gray-900 text-gray-300">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-20 py-16">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+            <!-- Logo & About -->
+
+            <div>
+
+                <h2 class="text-4xl font-bold text-orange-500 mb-4 hover:text-orange-400 transition duration-300">
+                    FitZone
+                </h2>
+
+                <p class="leading-7 text-gray-400">
+                    Train harder, live healthier, and become the strongest version of yourself with our premium gym facilities and expert trainers.
+                </p>
+
+                <div class="flex space-x-4 mt-6">
+
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-blue-600 hover:scale-110 transition duration-300">
+                        <i class="fab fa-facebook-f text-white"></i>
+                    </a>
+
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-pink-500 hover:scale-110 transition duration-300">
+                        <i class="fab fa-instagram text-white"></i>
+                    </a>
+
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-sky-500 hover:scale-110 transition duration-300">
+                        <i class="fab fa-twitter text-white"></i>
+                    </a>
+
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-red-600 hover:scale-110 transition duration-300">
+                        <i class="fab fa-youtube text-white"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Quick Links -->
+
+            <div>
+
+                <h3 class="text-2xl font-semibold text-white mb-6">
+                    Quick Links
+                </h3>
+
+                <ul class="space-y-4">
+
+                    <li>
+                        <a href="index.html" class="flex items-center gap-3 hover:text-orange-500 hover:translate-x-2 transition duration-300">
+                            <i class="fas fa-house text-orange-500"></i>
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html" class="flex items-center gap-3 hover:text-orange-500 hover:translate-x-2 transition duration-300">
+                            <i class="fas fa-circle-info text-orange-500"></i>
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="services.html" class="flex items-center gap-3 hover:text-orange-500 hover:translate-x-2 transition duration-300">
+                            <i class="fas fa-dumbbell text-orange-500"></i>
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="membership.html" class="flex items-center gap-3 hover:text-orange-500 hover:translate-x-2 transition duration-300">
+                            <i class="fas fa-id-card text-orange-500"></i>
+                            Membership
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html" class="flex items-center gap-3 hover:text-orange-500 hover:translate-x-2 transition duration-300">
+                            <i class="fas fa-phone-volume text-orange-500"></i>
+                            Contact
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="dashboard.html" class="flex items-center gap-3 hover:text-orange-500 hover:translate-x-2 transition duration-300">
+                            <i class="fas fa-gauge-high text-orange-500"></i>
+                            Dashboard
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Contact -->
+
+            <div>
+
+                <h3 class="text-2xl font-semibold text-white mb-6">
+                    Contact Us
+                </h3>
+
+                <div class="space-y-4">
+
+                    <p class="flex items-center hover:text-orange-500 transition duration-300">
+                        <i class="fas fa-location-dot text-orange-500 mr-3"></i>
+                        Chennai, Tamil Nadu
+                    </p>
+
+                    <p class="flex items-center hover:text-orange-500 transition duration-300">
+                        <i class="fas fa-phone text-orange-500 mr-3"></i>
+                        +91 98765 43210
+                    </p>
+
+                    <p class="flex items-center hover:text-orange-500 transition duration-300">
+                        <i class="fas fa-envelope text-orange-500 mr-3"></i>
+                        info@fitzone.com
+                    </p>
+
+                    <p class="flex items-center hover:text-orange-500 transition duration-300">
+                        <i class="fas fa-clock text-orange-500 mr-3"></i>
+                        Mon - Sun : 6:00 AM - 10:00 PM
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Newsletter -->
+
+            <div>
+
+                <h3 class="text-2xl font-semibold text-white mb-6">
+                    Newsletter
+                </h3>
+
+                <p class="mb-5 text-gray-400">
+                    Subscribe to receive fitness tips, exclusive offers, and the latest gym updates.
+                </p>
+
+                <div class="flex">
+
+                    <input
+                        type="email"
+                        placeholder="Enter Your Email"
+                        class="w-full px-4 py-3 rounded-l-lg text-black outline-none">
+
+                    <button class="bg-orange-500 px-5 rounded-r-lg hover:bg-orange-600 transition duration-300">
+
+                        <i class="fas fa-paper-plane text-white"></i>
+
+                    </button>
+
+                </div>
+
+                <button class="mt-6 w-full bg-orange-500 py-3 rounded-lg font-semibold hover:bg-orange-600 hover:scale-105 transition duration-300 flex items-center justify-center gap-2">
+
+                    <i class="fas fa-user-plus"></i>
+
+                    Join Now
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Bottom Footer -->
+
+        <div class="border-t border-gray-700 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center text-sm">
+
+            <p class="text-center md:text-left">
+                © 2026 <span class="text-orange-500 font-semibold">FitZone Gym & Fitness</span>. All Rights Reserved.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-6 mt-4 md:mt-0">
+
+                <a href="#" class="hover:text-orange-500 transition duration-300">
+                    Privacy Policy
+                </a>
+
+                <a href="#" class="hover:text-orange-500 transition duration-300">
+                    Terms & Conditions
+                </a>
+
+                <a href="#" class="hover:text-orange-500 transition duration-300">
+                    Support
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+

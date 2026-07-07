@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FitZone Gym & Fitness</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+        body{
+            font-family:'Poppins',sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+
+
+
+
+<!-- =========================
+        HEADER
+========================= -->
+
+<header class="fixed top-0 left-0 w-full bg-black/95 backdrop-blur-md shadow-lg z-50">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+        <div class="flex items-center justify-between h-20">
+
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-3">
+
+                <div class="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center shadow-lg">
+
+                    <i class="fas fa-dumbbell text-white text-xl"></i>
+
+                </div>
+
+                <div>
+
+                    <h1 class="text-3xl font-bold text-white">
+                        Fit<span class="text-orange-500">Zone</span>
+                    </h1>
+
+                    <p class="text-xs text-gray-400">
+                        Stronger Every Day
+                    </p>
+
+                </div>
+
+            </a>
+
+            <!-- Desktop Navigation -->
+            <ul class="hidden lg:flex items-center gap-7 text-white font-medium">
+
+                <li class="relative group">
+
+                    <button class="flex items-center gap-2 hover:text-orange-500 duration-300">
+
+                        Home
+
+                        <i class="fas fa-chevron-down text-xs group-hover:rotate-180 duration-300"></i>
+
+                    </button>
+
+                    <div class="absolute left-0 top-full mt-3 w-52 bg-white rounded-xl shadow-2xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+
+                        <a href="index.html"
+                           class="block px-5 py-3 text-gray-700 hover:bg-orange-500 hover:text-white">
+
+                            Home 1
+
+                        </a>
+
+                        <a href="home2.html"
+                           class="block px-5 py-3 text-gray-700 hover:bg-orange-500 hover:text-white">
+
+                            Home 2
+
+                        </a>
+
+                    </div>
+
+                </li>
+
+                <li><a href="admin.html" class="hover:text-orange-500 duration-300">Admin</a></li>
+
+                <li><a href="about.html" class="hover:text-orange-500 duration-300">About</a></li>
+
+                <li><a href="services.html" class="hover:text-orange-500 duration-300">Services</a></li>
+
+                <li><a href="membership.html" class="hover:text-orange-500 duration-300">Membership</a></li>
+
+                <li><a href="contact.html" class="hover:text-orange-500 duration-300">Contact</a></li>
+
+              
+                <li><a href="dashboard.html" class="hover:text-orange-500 duration-300">Dashboard</a></li>
+
+            </ul>
+
+            <!-- Desktop Buttons -->
+
+            <div class="hidden lg:flex items-center gap-3">
+
+                <!-- RTL -->
+
+                <button id="rtlBtn"
+                    class="w-11 h-11 rounded-lg border border-orange-500 text-white hover:bg-orange-500 duration-300">
+
+                    RTL
+
+                </button>
+
+                <!-- Dark -->
+
+                <button id="darkBtn"
+                    class="w-11 h-11 rounded-lg border border-orange-500 text-white hover:bg-orange-500 duration-300">
+
+                    <i class="fas fa-moon"></i>
+
+                </button>
+
+                <a href="login.html"
+                    class="px-6 py-2 border-2 border-orange-500 rounded-lg text-white hover:bg-orange-500 duration-300">
+
+                    Login
+
+                </a>
+
+                <a href="membership.html"
+                    class="px-6 py-2 bg-orange-500 rounded-lg text-white hover:bg-orange-600 duration-300">
+
+                    Join Now
+
+                </a>
+
+            </div>
+
+            <!-- Mobile Buttons -->
+
+            <div class="flex lg:hidden items-center gap-3">
+
+                <button id="mobileDark"
+                    class="text-white text-xl">
+
+                    <i class="fas fa-moon"></i>
+
+                </button>
+
+                <button id="mobileRTL"
+                    class="text-white font-bold">
+
+                    RTL
+
+                </button>
+
+                <button id="menuBtn"
+                    class="text-white text-2xl">
+
+                    <i class="fas fa-bars"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Mobile Menu -->
+
+    <div id="mobileMenu"
+        class="hidden lg:hidden bg-black border-t border-gray-800">
+
+        <div class="flex flex-col py-5">
+
+            <a href="index.html" class="px-6 py-3 text-white hover:bg-orange-500">Home 1</a>
+
+            <a href="home2.html" class="px-6 py-3 text-white hover:bg-orange-500">Home 2</a>
+
+            <a href="admin.html" class="px-6 py-3 text-white hover:bg-orange-500">Admin</a>
+
+            <a href="about.html" class="px-6 py-3 text-white hover:bg-orange-500">About</a>
+
+            <a href="services.html" class="px-6 py-3 text-white hover:bg-orange-500">Services</a>
+
+            <a href="membership.html" class="px-6 py-3 text-white hover:bg-orange-500">Membership</a>
+
+            <a href="contact.html" class="px-6 py-3 text-white hover:bg-orange-500">Contact</a>
+
+           
+            <a href="dashboard.html" class="px-6 py-3 text-white hover:bg-orange-500">Dashboard</a>
+
+            <div class="px-6 mt-4 flex gap-3">
+
+                <a href="login.html"
+                    class="flex-1 text-center border border-orange-500 py-2 rounded-lg text-white hover:bg-orange-500">
+
+                    Login
+
+                </a>
+
+                <a href="membership.html"
+                    class="flex-1 text-center bg-orange-500 py-2 rounded-lg text-white">
+
+                    Join Now
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<script>
+    // Mobile Menu
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+
+        const icon = menuBtn.querySelector("i");
+
+        if (mobileMenu.classList.contains("hidden")) {
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+        } else {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-xmark");
+        }
+    });
+
+    // Desktop Dark Mode
+    const darkBtn = document.getElementById("darkBtn");
+
+    darkBtn.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+        document.body.classList.toggle("bg-gray-900");
+        document.body.classList.toggle("text-white");
+    });
+
+    // Mobile Dark Mode
+    const mobileDark = document.getElementById("mobileDark");
+
+    mobileDark.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+        document.body.classList.toggle("bg-gray-900");
+        document.body.classList.toggle("text-white");
+    });
+
+    // RTL Toggle
+    function toggleRTL() {
+        const html = document.documentElement;
+
+        if (html.dir === "rtl") {
+            html.dir = "ltr";
+            html.lang = "en";
+        } else {
+            html.dir = "rtl";
+            html.lang = "ar";
+        }
+    }
+
+    document.getElementById("rtlBtn").addEventListener("click", toggleRTL);
+    document.getElementById("mobileRTL").addEventListener("click", toggleRTL);
+</script>
+
+
+
+
+
+
+
+<!-- Hero Section -->
+<section class="relative h-screen bg-[url('image/gym-banner.jpg')] bg-cover bg-center">
+
+    <!-- Dark Overlay -->
+    <div class="absolute inset-0 bg-black/70"></div>
+
+    <!-- Content -->
+    <div class="relative max-w-7xl mx-auto px-6 h-full flex items-center">
+
+        <div class="max-w-2xl text-white">
+
+            <span class="bg-orange-500 px-4 py-2 rounded-full text-sm font-semibold">
+                Welcome To FitZone Gym
+            </span>
+
+            <h1 class="text-5xl md:text-7xl font-bold leading-tight mt-6">
+                Strong Body
+                <br>
+                Strong Mind
+            </h1>
+
+            <p class="text-gray-300 text-lg mt-6 leading-8">
+                Build strength, burn fat, and stay motivated with certified
+                trainers, modern equipment, and premium fitness programs.
+            </p>
+
+            <div class="mt-10 flex flex-wrap gap-4">
+
+                <a href="#"
+                    class="bg-orange-500 hover:bg-orange-600 px-8 py-4 rounded-lg font-semibold transition">
+
+                    Join Now
+
+                </a>
+
+                <a href="#"
+                    class="border border-white hover:bg-white hover:text-black px-8 py-4 rounded-lg font-semibold transition">
+
+                    Free Trial
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+        OUR SERVICES
+========================== -->
+
+<section class="py-20 bg-white">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <!-- Heading -->
+        <div class="text-center mb-16">
+
+            <span class="text-orange-500 uppercase tracking-widest font-semibold">
+                Our Services
+            </span>
+
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-3">
+                Everything You Need To Reach Your Goals
+            </h2>
+
+            <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+                Discover premium fitness services designed to improve your strength, endurance, and overall wellness.
+            </p>
+
+        </div>
+
+        <!-- Services Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Card 1 -->
+            <div class="group border border-gray-200 rounded-2xl p-8 hover:bg-orange-500 hover:border-orange-500 transition duration-300">
+
+                <div class="w-16 h-16 rounded-xl bg-orange-100 flex items-center justify-center group-hover:bg-white">
+
+                    <i class="fa-solid fa-dumbbell text-3xl text-orange-500"></i>
+
+                </div>
+
+                <h3 class="text-2xl font-bold mt-6 group-hover:text-white">
+                    Strength Training
+                </h3>
+
+                <p class="text-gray-600 mt-4 group-hover:text-orange-100">
+                    Build muscle and improve endurance using advanced strength equipment.
+                </p>
+
+            </div>
+
+            <!-- Card 2 -->
+            <div class="group border border-gray-200 rounded-2xl p-8 hover:bg-orange-500 hover:border-orange-500 transition duration-300">
+
+                <div class="w-16 h-16 rounded-xl bg-orange-100 flex items-center justify-center group-hover:bg-white">
+
+                    <i class="fa-solid fa-heart-pulse text-3xl text-orange-500"></i>
+
+                </div>
+
+                <h3 class="text-2xl font-bold mt-6 group-hover:text-white">
+                    Cardio Zone
+                </h3>
+
+                <p class="text-gray-600 mt-4 group-hover:text-orange-100">
+                    Improve cardiovascular health with modern cardio equipment.
+                </p>
+
+            </div>
+
+            <!-- Card 3 -->
+            <div class="group border border-gray-200 rounded-2xl p-8 hover:bg-orange-500 hover:border-orange-500 transition duration-300">
+
+                <div class="w-16 h-16 rounded-xl bg-orange-100 flex items-center justify-center group-hover:bg-white">
+
+                    <i class="fa-solid fa-user-check text-3xl text-orange-500"></i>
+
+                </div>
+
+                <h3 class="text-2xl font-bold mt-6 group-hover:text-white">
+                    Personal Training
+                </h3>
+
+                <p class="text-gray-600 mt-4 group-hover:text-orange-100">
+                    Get one-on-one coaching tailored to your personal fitness goals.
+                </p>
+
+            </div>
+
+            <!-- Card 4 -->
+            <div class="group border border-gray-200 rounded-2xl p-8 hover:bg-orange-500 hover:border-orange-500 transition duration-300">
+
+                <div class="w-16 h-16 rounded-xl bg-orange-100 flex items-center justify-center group-hover:bg-white">
+
+                    <i class="fa-solid fa-users text-3xl text-orange-500"></i>
+
+                </div>
+
+                <h3 class="text-2xl font-bold mt-6 group-hover:text-white">
+                    Group Classes
+                </h3>
+
+                <p class="text-gray-600 mt-4 group-hover:text-orange-100">
+                    Stay motivated with energetic group fitness sessions every week.
+                </p>
+
+            </div>
+
+            <!-- Card 5 -->
+            <div class="group border border-gray-200 rounded-2xl p-8 hover:bg-orange-500 hover:border-orange-500 transition duration-300">
+
+                <div class="w-16 h-16 rounded-xl bg-orange-100 flex items-center justify-center group-hover:bg-white">
+
+                    <i class="fa-solid fa-apple-whole text-3xl text-orange-500"></i>
+
+                </div>
+
+                <h3 class="text-2xl font-bold mt-6 group-hover:text-white">
+                    Nutrition Support
+                </h3>
+
+                <p class="text-gray-600 mt-4 group-hover:text-orange-100">
+                    Receive healthy meal guidance to complement your workout routine.
+                </p>
+
+            </div>
+
+            <!-- Card 6 -->
+            <div class="group border border-gray-200 rounded-2xl p-8 hover:bg-orange-500 hover:border-orange-500 transition duration-300">
+
+                <div class="w-16 h-16 rounded-xl bg-orange-100 flex items-center justify-center group-hover:bg-white">
+
+                    <i class="fa-solid fa-chart-line text-3xl text-orange-500"></i>
+
+                </div>
+
+                <h3 class="text-2xl font-bold mt-6 group-hover:text-white">
+                    Progress Tracking
+                </h3>
+
+                <p class="text-gray-600 mt-4 group-hover:text-orange-100">
+                    Monitor your performance and celebrate every milestone.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- Trainers Section -->
+<section class="bg-gray-950 py-20">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <!-- Heading -->
+        <div class="text-center mb-14">
+            <h2 class="text-4xl font-bold text-white">
+                Meet Our Expert Trainers
+            </h2>
+            <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
+                Our certified trainers are dedicated to helping you achieve your fitness goals with personalized guidance.
+            </p>
+        </div>
+
+        <!-- Trainer Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <!-- Trainer 1 -->
+            <div class="bg-gray-900 rounded-2xl p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+
+                <div class="w-28 h-28 mx-auto rounded-full bg-orange-500 flex items-center justify-center text-4xl font-bold text-white">
+                    AK
+                </div>
+
+                <h3 class="text-2xl font-semibold text-white mt-6">
+                    Arjun Kumar
+                </h3>
+
+                <p class="text-orange-500 mt-2">
+                    Strength Coach
+                </p>
+
+                <p class="text-gray-400 mt-4 text-sm">
+                    8+ years of experience in strength training and muscle building.
+                </p>
+
+                <div class="flex justify-center gap-2 mt-5">
+                    <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm">CrossFit</span>
+                    <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm">Powerlifting</span>
+                </div>
+
+            </div>
+
+            <!-- Trainer 2 -->
+            <div class="bg-gray-900 rounded-2xl p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+
+                <div class="w-28 h-28 mx-auto rounded-full bg-orange-500 flex items-center justify-center text-4xl font-bold text-white">
+                    SP
+                </div>
+
+                <h3 class="text-2xl font-semibold text-white mt-6">
+                    Sneha Patel
+                </h3>
+
+                <p class="text-orange-500 mt-2">
+                    Yoga Instructor
+                </p>
+
+                <p class="text-gray-400 mt-4 text-sm">
+                    Expert in yoga, flexibility, breathing techniques, and stress management.
+                </p>
+
+                <div class="flex justify-center gap-2 mt-5">
+                    <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm">Yoga</span>
+                    <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm">Meditation</span>
+                </div>
+
+            </div>
+
+            <!-- Trainer 3 -->
+            <div class="bg-gray-900 rounded-2xl p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+
+                <div class="w-28 h-28 mx-auto rounded-full bg-orange-500 flex items-center justify-center text-4xl font-bold text-white">
+                    RV
+                </div>
+
+                <h3 class="text-2xl font-semibold text-white mt-6">
+                    Rahul Verma
+                </h3>
+
+                <p class="text-orange-500 mt-2">
+                    Cardio Specialist
+                </p>
+
+                <p class="text-gray-400 mt-4 text-sm">
+                    Helps members improve endurance, stamina, and overall heart health.
+                </p>
+
+                <div class="flex justify-center gap-2 mt-5">
+                    <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm">HIIT</span>
+                    <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm">Cardio</span>
+                </div>
+
+            </div>
+
+            <!-- Trainer 4 -->
+            <div class="bg-gray-900 rounded-2xl p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+
+                <div class="w-28 h-28 mx-auto rounded-full bg-orange-500 flex items-center justify-center text-4xl font-bold text-white">
+                    NP
+                </div>
+
+                <h3 class="text-2xl font-semibold text-white mt-6">
+                    Neha Sharma
+                </h3>
+
+                <p class="text-orange-500 mt-2">
+                    Nutrition Expert
+                </p>
+
+                <p class="text-gray-400 mt-4 text-sm">
+                    Creates customized meal plans to maximize your fitness results.
+                </p>
+
+                <div class="flex justify-center gap-2 mt-5">
+                    <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm">Diet</span>
+                    <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm">Nutrition</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+
+<!-- Fitness Goal Calculator -->
+<section class="bg-gradient-to-br from-gray-950 via-black to-gray-900 py-20">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-white">
+                Find Your Perfect Fitness Plan
+            </h2>
+            <p class="text-gray-400 mt-4">
+                Select your fitness goal and discover the best training plan.
+            </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-10">
+
+            <!-- Left -->
+            <div class="bg-gray-900 rounded-2xl p-8 border border-gray-800">
+
+                <label class="text-white font-semibold block mb-3">
+                    Select Your Goal
+                </label>
+
+                <select id="goal"
+                    class="w-full bg-gray-800 text-white rounded-lg p-4 border border-gray-700 focus:outline-none focus:border-orange-500"
+                    onchange="changePlan()">
+
+                    <option value="weight">Weight Loss</option>
+                    <option value="muscle">Muscle Gain</option>
+                    <option value="strength">Strength Training</option>
+                    <option value="fitness">General Fitness</option>
+
+                </select>
+
+            </div>
+
+            <!-- Right -->
+            <div class="bg-orange-500 rounded-2xl p-8 text-white">
+
+                <h3 class="text-3xl font-bold mb-6">
+                    Recommended Plan
+                </h3>
+
+                <div class="space-y-4">
+
+                    <div>
+                        <p class="text-orange-100">Workout Days</p>
+                        <h4 id="days" class="text-2xl font-bold">
+                            5 Days / Week
+                        </h4>
+                    </div>
+
+                    <div>
+                        <p class="text-orange-100">Calories</p>
+                        <h4 id="calories" class="text-2xl font-bold">
+                            1800 kcal/day
+                        </h4>
+                    </div>
+
+                    <div>
+                        <p class="text-orange-100">Workout Type</p>
+                        <h4 id="workout" class="text-2xl font-bold">
+                            Cardio + HIIT
+                        </h4>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<script>
+function changePlan(){
+
+let goal=document.getElementById("goal").value;
+
+if(goal=="weight"){
+document.getElementById("days").innerHTML="5 Days / Week";
+document.getElementById("calories").innerHTML="1800 kcal/day";
+document.getElementById("workout").innerHTML="Cardio + HIIT";
+}
+
+else if(goal=="muscle"){
+document.getElementById("days").innerHTML="6 Days / Week";
+document.getElementById("calories").innerHTML="2800 kcal/day";
+document.getElementById("workout").innerHTML="Strength + Hypertrophy";
+}
+
+else if(goal=="strength"){
+document.getElementById("days").innerHTML="4 Days / Week";
+document.getElementById("calories").innerHTML="2500 kcal/day";
+document.getElementById("workout").innerHTML="Powerlifting";
+}
+
+else{
+document.getElementById("days").innerHTML="3 Days / Week";
+document.getElementById("calories").innerHTML="2200 kcal/day";
+document.getElementById("workout").innerHTML="Mixed Fitness";
+}
+
+}
+</script>
+
+
+
+
+
+
+
+
+<!-- =========================
+        MODERN FOOTER
+========================= -->
+
+<footer class="bg-gradient-to-r from-gray-900 via-black to-gray-900 text-gray-300">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-20 py-16">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+            <!-- Logo & About -->
+
+            <div>
+
+                <h2 class="text-4xl font-bold text-orange-500 mb-4 hover:text-orange-400 transition duration-300">
+                    FitZone
+                </h2>
+
+                <p class="leading-7 text-gray-400">
+                    Train harder, live healthier, and become the strongest version of yourself with our premium gym facilities and expert trainers.
+                </p>
+
+                <div class="flex space-x-4 mt-6">
+
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-blue-600 hover:scale-110 transition duration-300">
+                        <i class="fab fa-facebook-f text-white"></i>
+                    </a>
+
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-pink-500 hover:scale-110 transition duration-300">
+                        <i class="fab fa-instagram text-white"></i>
+                    </a>
+
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-sky-500 hover:scale-110 transition duration-300">
+                        <i class="fab fa-twitter text-white"></i>
+                    </a>
+
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-red-600 hover:scale-110 transition duration-300">
+                        <i class="fab fa-youtube text-white"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Quick Links -->
+
+            <div>
+
+                <h3 class="text-2xl font-semibold text-white mb-6">
+                    Quick Links
+                </h3>
+
+                <ul class="space-y-4">
+
+                    <li>
+                        <a href="index.html" class="flex items-center gap-3 hover:text-orange-500 hover:translate-x-2 transition duration-300">
+                            <i class="fas fa-house text-orange-500"></i>
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html" class="flex items-center gap-3 hover:text-orange-500 hover:translate-x-2 transition duration-300">
+                            <i class="fas fa-circle-info text-orange-500"></i>
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="services.html" class="flex items-center gap-3 hover:text-orange-500 hover:translate-x-2 transition duration-300">
+                            <i class="fas fa-dumbbell text-orange-500"></i>
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="membership.html" class="flex items-center gap-3 hover:text-orange-500 hover:translate-x-2 transition duration-300">
+                            <i class="fas fa-id-card text-orange-500"></i>
+                            Membership
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html" class="flex items-center gap-3 hover:text-orange-500 hover:translate-x-2 transition duration-300">
+                            <i class="fas fa-phone-volume text-orange-500"></i>
+                            Contact
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="dashboard.html" class="flex items-center gap-3 hover:text-orange-500 hover:translate-x-2 transition duration-300">
+                            <i class="fas fa-gauge-high text-orange-500"></i>
+                            Dashboard
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Contact -->
+
+            <div>
+
+                <h3 class="text-2xl font-semibold text-white mb-6">
+                    Contact Us
+                </h3>
+
+                <div class="space-y-4">
+
+                    <p class="flex items-center hover:text-orange-500 transition duration-300">
+                        <i class="fas fa-location-dot text-orange-500 mr-3"></i>
+                        Chennai, Tamil Nadu
+                    </p>
+
+                    <p class="flex items-center hover:text-orange-500 transition duration-300">
+                        <i class="fas fa-phone text-orange-500 mr-3"></i>
+                        +91 98765 43210
+                    </p>
+
+                    <p class="flex items-center hover:text-orange-500 transition duration-300">
+                        <i class="fas fa-envelope text-orange-500 mr-3"></i>
+                        info@fitzone.com
+                    </p>
+
+                    <p class="flex items-center hover:text-orange-500 transition duration-300">
+                        <i class="fas fa-clock text-orange-500 mr-3"></i>
+                        Mon - Sun : 6:00 AM - 10:00 PM
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Newsletter -->
+
+            <div>
+
+                <h3 class="text-2xl font-semibold text-white mb-6">
+                    Newsletter
+                </h3>
+
+                <p class="mb-5 text-gray-400">
+                    Subscribe to receive fitness tips, exclusive offers, and the latest gym updates.
+                </p>
+
+                <div class="flex">
+
+                    <input
+                        type="email"
+                        placeholder="Enter Your Email"
+                        class="w-full px-4 py-3 rounded-l-lg text-black outline-none">
+
+                    <button class="bg-orange-500 px-5 rounded-r-lg hover:bg-orange-600 transition duration-300">
+
+                        <i class="fas fa-paper-plane text-white"></i>
+
+                    </button>
+
+                </div>
+
+                <button class="mt-6 w-full bg-orange-500 py-3 rounded-lg font-semibold hover:bg-orange-600 hover:scale-105 transition duration-300 flex items-center justify-center gap-2">
+
+                    <i class="fas fa-user-plus"></i>
+
+                    Join Now
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Bottom Footer -->
+
+        <div class="border-t border-gray-700 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center text-sm">
+
+            <p class="text-center md:text-left">
+                © 2026 <span class="text-orange-500 font-semibold">FitZone Gym & Fitness</span>. All Rights Reserved.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-6 mt-4 md:mt-0">
+
+                <a href="#" class="hover:text-orange-500 transition duration-300">
+                    Privacy Policy
+                </a>
+
+                <a href="#" class="hover:text-orange-500 transition duration-300">
+                    Terms & Conditions
+                </a>
+
+                <a href="#" class="hover:text-orange-500 transition duration-300">
+                    Support
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+
+
+
+
+
+
