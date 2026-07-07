@@ -19,11 +19,43 @@
     <style>
         body{
             font-family:'Poppins',sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        html.dark body {
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        html.dark .bg-white,
+        html.dark .bg-gray-50,
+        html.dark .bg-gray-100,
+        html.dark .bg-slate-50 {
+            background-color: #111827 !important;
+        }
+
+        html.dark .text-gray-900,
+        html.dark .text-gray-800,
+        html.dark .text-gray-700,
+        html.dark .text-gray-600 {
+            color: #ffffff !important;
+        }
+
+        html.dark .text-gray-400,
+        html.dark .text-gray-500,
+        html.dark .text-gray-300 {
+            color: #d1d5db !important;
+        }
+
+        html.dark .border-gray-200,
+        html.dark .border-gray-300,
+        html.dark .border-gray-700 {
+            border-color: #374151 !important;
         }
     </style>
 </head>
 
-<body class="bg-white">
+<body class="bg-white text-gray-900 transition-colors duration-300">
 
 
 
@@ -247,22 +279,35 @@
         }
     });
 
+    function setTheme(isDark) {
+        document.documentElement.classList.toggle("dark", isDark);
+        document.body.classList.toggle("bg-black", isDark);
+        document.body.classList.toggle("text-white", isDark);
+        document.body.classList.toggle("bg-white", !isDark);
+        document.body.classList.toggle("text-gray-900", !isDark);
+        localStorage.setItem("siteTheme", isDark ? "dark" : "light");
+    }
+
+    function initTheme() {
+        const savedTheme = localStorage.getItem("siteTheme");
+        const isDark = savedTheme ? savedTheme === "dark" : false;
+        setTheme(isDark);
+    }
+
+    initTheme();
+
     // Desktop Dark Mode
     const darkBtn = document.getElementById("darkBtn");
 
     darkBtn.addEventListener("click", () => {
-        document.documentElement.classList.toggle("dark");
-        document.body.classList.toggle("bg-gray-900");
-        document.body.classList.toggle("text-white");
+        setTheme(!document.documentElement.classList.contains("dark"));
     });
 
     // Mobile Dark Mode
     const mobileDark = document.getElementById("mobileDark");
 
     mobileDark.addEventListener("click", () => {
-        document.documentElement.classList.toggle("dark");
-        document.body.classList.toggle("bg-gray-900");
-        document.body.classList.toggle("text-white");
+        setTheme(!document.documentElement.classList.contains("dark"));
     });
 
     // RTL Toggle
